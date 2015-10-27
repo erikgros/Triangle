@@ -94,7 +94,7 @@ RM = /bin/rm
 
 # The action starts here.
 
-all: $(BIN)triangle $(BIN)showme
+all: $(BIN)triangle showme
 
 trilibrary: $(BIN)triangle.o $(BIN)tricall
 
@@ -109,7 +109,7 @@ $(BIN)triangle.o: $(SRC)triangle.c $(SRC)triangle.h
 	$(CC) $(CSWITCHES) $(TRILIBDEFS) -c -o $(BIN)triangle.o \
 		$(SRC)triangle.c
 
-$(BIN)showme: $(SRC)showme.c
+showme: $(SRC)showme.c
 	$(CC) $(CSWITCHES) -o $(BIN)showme $(SRC)showme.c -lX11
 
 distclean:
